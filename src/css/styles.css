@@ -1,0 +1,22 @@
+.container {
+
+    
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body {
+    height: 80%;
+}
+
+.logout {
+
+    height: 20%;
+}
+
+.p{
+    
+}

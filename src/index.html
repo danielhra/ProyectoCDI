@@ -12,45 +12,60 @@
     <link rel="stylesheet" href="/css/styles.css">
 
     <!-- hojas de estilo propia -->
-    <link rel="stylesheet" href="/css/cover.css" >
+    <link href="/css/floating-labels.css" rel="stylesheet">
+
+    <script>  
+
+    function seleccionarUsuario(){
+    
+
+      var policia = "daniel@policia.com";
+      var usuario = "patxi@denunciante.com";
+      var contra = "123";
+
+      if((document.getElementById("inputEmail").value == policia )&& (document.getElementById("inputPassword").value == contra))
+        window.location.href = "policia.html";
+      
+      else if((document.getElementById("inputEmail").value == usuario) && (document.getElementById("inputPassword").value == contra))
+        window.location.href = "usuario.html";
+        else 
+        window.location.href="inicio.html"
+    }
+    
+    </script> 
+    
 </head>
 
 
-<body class="text-center">
+<body>
+    <form class="form-signin">
+      <div class="text-center mb-4">
+        <img class="mb-4" src= "/assets/img/cochePolicia.jpg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Gestion Policial</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi veniam sequi doloribus, asperiores error necessitatibus nesciunt dolore id in corrupti quas, molestias beatae saepe quos ut quibusdam illum dolorum. Blanditiis!</p>
+      </div>
 
-    <img src="/src7assets/img/58.jpg"> 
+      <div class="form-label-group">
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+        <label for="inputEmail">Correo Electronico</label>
+      </div>
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            <div class="inner">
-                <h3 class="masthead-brand">Policia Nacional</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Ciudadanos</a>
-                    <a class="nav-link" href="#">Cuerpo Policial</a>
-                    <a class="nav-link" href="#">Contacto</a>
-                </nav>
-            </div>
-        </header>
+      <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <label for="inputPassword">Contraseña</label>
+      </div>
 
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading">Protegidos por la ley</h1>
-            <p class="lead">Manten a tus amigos cerca y a tus enemigos aun mas cerca</p>
-            <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary">Protegete</a>
-            </p>
-        </main>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Recuerdame
+        </label>
+      </div>
+      <button onclick="seleccionarUsuario()" class="btn btn-lg btn-primary btn-block" type="button" value=sub>Iniciar Sesion</button>
+      <p class="mt-5 mb-3 text-muted text-center">© 2018</p>
+    </form>
+  
 
-        <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>hecho para eva by <a href="https://twitter.com/antihigienic">danilo</a>.</p>
-        </div>
-      </footer>
 
-    </div>
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>
